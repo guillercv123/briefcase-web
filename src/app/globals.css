@@ -1,21 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --primary-color: #64ffda;
+  --secondary-color: #0a192f;
+  --text-color: #ccd6f6;
+  --bg-color: #0a192f;
+  --deg: 1;
+  --x: -50%;
+  --y: -50%;
+  view-transition-name: root;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+/* styles/globals.css */
+
+/* Aplica el color cuando un enlace es enfocado (focus) o activo (active) */
+a:focus, a:active {
+  color: #64ffda; /* Color de texto cuando está enfocado o activo */
+}
+
+/* Puedes hacer lo mismo para otros elementos como botones, campos de entrada, etc. */
+button:focus, button:active {
+  color: #64ffda; /* Color de texto cuando el botón es seleccionado */
+}
+
+input:focus, textarea:focus {
+  border-color: #64ffda; /* Cambiar el borde a color al seleccionar un campo de entrada */
+  outline: none; /* Opcional: quitar el contorno predeterminado del navegador */
+}
+
+/* Si deseas aplicar un color global en los elementos seleccionados de todo el sitio */
+*::selection {
+  background-color: #64ffda; /* Color de fondo cuando el texto es seleccionado */
+  color: #000; /* Cambia el color del texto mientras esté seleccionado */
 }
